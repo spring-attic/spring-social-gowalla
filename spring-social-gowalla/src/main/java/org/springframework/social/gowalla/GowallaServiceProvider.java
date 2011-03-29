@@ -13,22 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.social.gowalla.connect;
+package org.springframework.social.gowalla;
 
-import org.springframework.social.connect.oauth2.AbstractOAuth2ServiceProvider;
-import org.springframework.social.connect.support.ConnectionRepository;
-import org.springframework.social.gowalla.GowallaApi;
-import org.springframework.social.gowalla.GowallaTemplate;
+import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.oauth2.OAuth2Template;
 
 public class GowallaServiceProvider extends AbstractOAuth2ServiceProvider<GowallaApi> {
 
-	public GowallaServiceProvider(String clientId, String clientSecret, ConnectionRepository connectionRepository) {
-		super("gowalla", connectionRepository, new OAuth2Template(clientId, clientSecret,
-				"https://gowalla.com/api/oauth/new?client_id={client_id}&redirect_uri={redirect_uri}&scope={scope}", "https://gowalla.com/api/oauth/token"));
+	public GowallaServiceProvider(String clientId, String clientSecret) {
+		super(clientId, clientSecret, new OAuth2Template(clientId, clientSecret, 
+			"https://gowalla.com/api/oauth/new?client_id={client_id}&redirect_uri={redirect_uri}&scope={scope}",
+			"https://gowalla.com/api/oauth/token"));
 	}
 
-	protected GowallaApi getApi(String accessToken) {
+	public GowallaApi getServiceApi(String accessToken) {
 		return new GowallaTemplate(accessToken);
 	}
 	
