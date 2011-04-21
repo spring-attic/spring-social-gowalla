@@ -16,8 +16,7 @@
 package org.springframework.social.gowalla.connect;
 
 import org.springframework.social.connect.support.OAuth2ServiceProviderConnectionFactory;
-import org.springframework.social.gowalla.GowallaApi;
-import org.springframework.social.gowalla.GowallaServiceProvider;
+import org.springframework.social.gowalla.api.GowallaApi;
 
 public class GowallaServiceProviderConnectionFactory extends OAuth2ServiceProviderConnectionFactory<GowallaApi> {
 

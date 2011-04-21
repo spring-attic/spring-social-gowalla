@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.social.gowalla;
+package org.springframework.social.gowalla.api.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +22,9 @@ import java.util.Map;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.social.gowalla.api.Checkin;
+import org.springframework.social.gowalla.api.GowallaApi;
+import org.springframework.social.gowalla.api.GowallaProfile;
 import org.springframework.social.oauth2.ProtectedResourceClientFactory;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;

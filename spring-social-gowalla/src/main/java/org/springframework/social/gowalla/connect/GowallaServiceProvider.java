@@ -13,8 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.social.gowalla;
+package org.springframework.social.gowalla.connect;
 
+import org.springframework.social.gowalla.api.GowallaApi;
+import org.springframework.social.gowalla.api.impl.GowallaTemplate;
 import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.oauth2.OAuth2Template;
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.social.gowalla;
+package org.springframework.social.gowalla.api.impl;
 
 import static org.junit.Assert.*;
 import static org.springframework.http.HttpMethod.*;
@@ -27,6 +27,8 @@ import org.junit.Test;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.social.gowalla.api.Checkin;
+import org.springframework.social.gowalla.api.impl.GowallaTemplate;
 import org.springframework.social.test.client.MockRestServiceServer;
 
 /**
