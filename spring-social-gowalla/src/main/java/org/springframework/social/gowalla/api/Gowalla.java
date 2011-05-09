@@ -29,7 +29,7 @@ import org.springframework.social.gowalla.api.impl.GowallaTemplate;
  * 
  * @author Craig Walls
  */
-public interface GowallaApi {
+public interface Gowalla {
 
 	/**
 	 * Retrieves the user's Gowalla profile ID.
