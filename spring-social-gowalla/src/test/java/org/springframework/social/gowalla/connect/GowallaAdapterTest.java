@@ -23,16 +23,16 @@ import org.springframework.social.connect.UserProfile;
 import org.springframework.social.gowalla.api.Gowalla;
 import org.springframework.social.gowalla.api.GowallaProfile;
 
-public class GowallaApiAdapterTest {
+public class GowallaAdapterTest {
 
-	private GowallaApiAdapter apiAdapter = new GowallaApiAdapter();
+	private GowallaAdapter apiAdapter = new GowallaAdapter();
 	
-	private Gowalla api = Mockito.mock(Gowalla.class);
+	private Gowalla gowalla = Mockito.mock(Gowalla.class);
 	
 	@Test
 	public void fetchProfile() {		
-		Mockito.when(api.getUserProfile()).thenReturn(new GowallaProfile("habuma", "Craig", "Walls", "Plano, TX", 1, 2, "http://s3.amazonaws.com/static.gowalla.com/users/362641-standard.jpg?1294162106"));
-		UserProfile profile = apiAdapter.fetchUserProfile(api);
+		Mockito.when(gowalla.getUserProfile()).thenReturn(new GowallaProfile("habuma", "Craig", "Walls", "Plano, TX", 1, 2, "http://s3.amazonaws.com/static.gowalla.com/users/362641-standard.jpg?1294162106"));
+		UserProfile profile = apiAdapter.fetchUserProfile(gowalla);
 		assertEquals("Craig Walls", profile.getName());
 		assertEquals("Craig", profile.getFirstName());
 		assertEquals("Walls", profile.getLastName());
