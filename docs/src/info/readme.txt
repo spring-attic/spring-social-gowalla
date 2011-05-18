@@ -1,7 +1,6 @@
-Spring Social
+Spring Social Gowalla
 -----------------------------------------------------------
-The Spring Social project allows you to integrate the APIs exposed by Software-as-a-Service (SaaS) providers such as Facebook and Twitter into your applications.
-It consists of a service provider 'connect' framework, sign-in support, and strongly-typed Java API bindings.
+Spring Social Gowalla is an extension of Spring Social for connecting with Gowalla
 
 To find out what has changed in this release, see 'changelog.txt'
 
