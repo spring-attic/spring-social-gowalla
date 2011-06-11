@@ -17,6 +17,7 @@ package org.springframework.social.gowalla.api;
 
 import java.util.List;
 
+import org.springframework.social.ApiBinding;
 import org.springframework.social.gowalla.api.impl.GowallaTemplate;
 
 /**
@@ -29,7 +30,7 @@ import org.springframework.social.gowalla.api.impl.GowallaTemplate;
  * 
  * @author Craig Walls
  */
-public interface Gowalla {
+public interface Gowalla extends ApiBinding {
 
 	/**
 	 * Retrieves the user's Gowalla profile ID.
